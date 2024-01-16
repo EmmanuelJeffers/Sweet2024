@@ -11,8 +11,7 @@ public class EjectCommand extends Command {
 
   Intake intake;
 
-  public EjectCommand(Intake intake) {
-    this.intake = intake;
+  public EjectCommand() {
     addRequirements(intake);
   }
 
