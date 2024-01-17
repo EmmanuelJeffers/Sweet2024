@@ -10,87 +10,9 @@
     }
   },
   "NetworkTables Info": {
-    "visible": true
-  }
-}
-{
-  "HALProvider": {
-    "Other Devices": {
-      "CANCoder (v6)[34]": {
-        "header": {
-          "open": true
-        }
-      },
-      "Pigeon 2 (v6)[2]": {
-        "header": {
-          "open": true
-        }
-      }
-    }
-  },
-  "NTProvider": {
-    "types": {
-      "/FMSInfo": "FMSInfo",
-      "/Pose": "Field2d",
-      "/SmartDashboard/Module 0": "Mechanism2d",
-      "/SmartDashboard/Module 1": "Mechanism2d",
-      "/SmartDashboard/Module 2": "Mechanism2d",
-      "/SmartDashboard/Module 3": "Mechanism2d"
+    "Connections": {
+      "open": true
     },
-    "windows": {
-      "/Pose": {
-        "bottom": 544,
-        "builtin": "2024 Crescendo",
-        "height": 8.013679504394531,
-        "left": 46,
-        "right": 1088,
-        "robotPose": {
-          "arrowColor": [
-            0.9259259104728699,
-            0.4191433787345886,
-            0.013717401772737503,
-            255.0
-          ],
-          "color": [
-            0.059931401163339615,
-            0.3374180793762207,
-            0.9518518447875977,
-            255.0
-          ]
-        },
-        "top": 36,
-        "width": 16.541748046875,
-        "window": {
-          "visible": true
-        }
-      }
-    }
-  },
-  "NetworkTables": {
-    "transitory": {
-      "Drive": {
-        "open": true
-      },
-      "PathPlanner": {
-        "HotReload": {
-          "open": true
-        }
-      },
-      "Pose": {
-        "double[]##v_/Pose/robotPose": {
-          "open": true
-        },
-        "open": true
-      },
-      "SmartDashboard": {
-        "Module 0": {
-          "open": true
-        },
-        "open": true
-      }
-    }
-  },
-  "NetworkTables Info": {
     "visible": true
   }
 }
