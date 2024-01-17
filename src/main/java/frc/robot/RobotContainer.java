@@ -41,10 +41,10 @@ public class RobotContainer {
   // NamedCommands.registerCommand("Eject", new EjectCommand());
 
   /* Path Follower */
-  private Command runAuto = drivetrain.getAutoPath("Test");
+  // private Command runAuto = drivetrain.getAutoPath("Test");
 
   // Auto Chooser
-  private final SendableChooser<Command> autoChooser;
+  // private final SendableChooser<Command> autoChooser;
 
 
 
@@ -72,13 +72,13 @@ public class RobotContainer {
   public RobotContainer() {
 
     // Build an auto chooser. This will use Commands.none() as the default option.
-    autoChooser = AutoBuilder.buildAutoChooser("Test");
-    SmartDashboard.putData("Auto Chooser", autoChooser);
+    // autoChooser = AutoBuilder.buildAutoChooser("Test");
+    // SmartDashboard.putData("Auto Chooser", autoChooser);
 
     configureBindings();
   }
 
   public Command getAutonomousCommand() {
-    return autoChooser.getSelected();
+    return null;
   }
 }
