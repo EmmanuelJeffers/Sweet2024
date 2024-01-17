@@ -11,8 +11,7 @@ public class IntakeCommand extends Command {
 
   Intake intake;
 
-  public IntakeCommand(Intake intake) {
-    this.intake = intake;
+  public IntakeCommand() {
     addRequirements(intake);
   }
 

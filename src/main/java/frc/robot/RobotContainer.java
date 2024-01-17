@@ -16,8 +16,9 @@ import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.Commands;
 import edu.wpi.first.wpilibj2.command.button.CommandPS5Controller;
+import frc.robot.commands.EjectCommand;
+import frc.robot.commands.IntakeCommand;
 import frc.robot.generated.TunerConstants;
 import frc.robot.subsystems.CommandSwerveDrivetrain;
 
@@ -70,15 +71,11 @@ public class RobotContainer {
   }
 
   public RobotContainer() {
-
-    // Build an auto chooser. This will use Commands.none() as the default option.
-    // autoChooser = AutoBuilder.buildAutoChooser("Test");
-    // SmartDashboard.putData("Auto Chooser", autoChooser);
-
     configureBindings();
   }
 
   public Command getAutonomousCommand() {
+
     return null;
   }
 }
