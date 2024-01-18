@@ -1,0 +1,49 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 1.2538408724467212,
+        "y": 4.870209382978652
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 1.74227242376422,
+        "y": 4.588213295344788
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 2.3,
+        "y": 4.11213065598492
+      },
+      "prevControl": {
+        "x": 1.9456022465500795,
+        "y": 4.316742294339431
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": null
+    }
+  ],
+  "rotationTargets": [],
+  "constraintZones": [],
+  "eventMarkers": [],
+  "globalConstraints": {
+    "maxVelocity": 4.0,
+    "maxAcceleration": 4.0,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 0,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": "4pc Chicken",
+  "previewStartingState": null,
+  "useDefaultConstraints": false
+}

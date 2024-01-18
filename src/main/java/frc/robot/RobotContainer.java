@@ -21,6 +21,7 @@ import frc.robot.commands.EjectCommand;
 import frc.robot.commands.IntakeCommand;
 import frc.robot.generated.TunerConstants;
 import frc.robot.subsystems.CommandSwerveDrivetrain;
+import frc.robot.subsystems.Intake;
 
 public class RobotContainer {
   private double MaxSpeed = 6; // 6 meters per second desired top speed
@@ -29,6 +30,7 @@ public class RobotContainer {
   /* Setting up bindings for necessary control of the swerve drive platform */
   private final CommandPS5Controller roller = new CommandPS5Controller(0); // My roller
   private final CommandSwerveDrivetrain drivetrain = TunerConstants.DriveTrain; // My drivetrain
+  // private final Intake intake = new Intake(); // My intake
 
   private final SwerveRequest.FieldCentric drive = new SwerveRequest.FieldCentric()
       .withDeadband(MaxSpeed * 0.1).withRotationalDeadband(MaxAngularRate * 0.1) // Add a 10% deadband
@@ -38,11 +40,8 @@ public class RobotContainer {
   private final SwerveRequest.PointWheelsAt point = new SwerveRequest.PointWheelsAt();
   private final Telemetry logger = new Telemetry(MaxSpeed);
 
-  // NamedCommands.registerCommand("Intake", new IntakeCommand());
-  // NamedCommands.registerCommand("Eject", new EjectCommand());
-
   /* Path Follower */
-  private Command runAuto = drivetrain.getAutoPath("Test");
+  private Command runAuto = drivetrain.getAutoPath("5pc Nuggies");
 
   // Auto Chooser
   // private final SendableChooser<Command> autoChooser;
@@ -71,6 +70,10 @@ public class RobotContainer {
   }
 
   public RobotContainer() {
+
+    // NamedCommands.registerCommand("Intake Command", new IntakeCommand().until(intake::intakeAutoDone));
+    // NamedCommands.registerCommand("Eject Command", new EjectCommand().until(intake::outakeAutoDone));
+
     configureBindings();
   }
 

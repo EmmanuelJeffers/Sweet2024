@@ -4,18 +4,51 @@
 
 package frc.robot.subsystems;
 
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.CANSparkBase.IdleMode;
+import com.revrobotics.CANSparkLowLevel.MotorType;
+
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Intake extends SubsystemBase {
+
+  CANSparkMax intakeMotor;
+
   /** Creates a new Intake. */
   public Intake() {
+    intakeMotor = new CANSparkMax(4, MotorType.kBrushless);
+    intakeMotor.setIdleMode(IdleMode.kCoast);
   }
 
-  public void intake(double power) {}
+  public void intake(double power) {
+    intakeMotor.set(-power);
+  }
 
-  public void eject(double power) {}
+  public void eject(double power) {
+    intakeMotor.set(power);
+  }
 
-  public void stop() {}
+  public void stop() {
+    intakeMotor.set(0);
+  }
+
+  public boolean intakeAutoDone() {
+    if (intakeMotor.getEncoder().getPosition() <= -20) {
+      return true;
+    }
+    return false;
+  }
+
+  public boolean outakeAutoDone() {
+    if (intakeMotor.getEncoder().getPosition() >= 40) {
+      return true;
+    }
+    return false;
+  }
+
+  public void resetIntakeEncoder() {
+    intakeMotor.getEncoder().setPosition(0);
+  }
 
   @Override
   public void periodic() {
