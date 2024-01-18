@@ -42,7 +42,7 @@ public class RobotContainer {
   // NamedCommands.registerCommand("Eject", new EjectCommand());
 
   /* Path Follower */
-  // private Command runAuto = drivetrain.getAutoPath("Test");
+  private Command runAuto = drivetrain.getAutoPath("Test");
 
   // Auto Chooser
   // private final SendableChooser<Command> autoChooser;
@@ -76,6 +76,6 @@ public class RobotContainer {
 
   public Command getAutonomousCommand() {
 
-    return null;
+    return runAuto;
   }
 }
