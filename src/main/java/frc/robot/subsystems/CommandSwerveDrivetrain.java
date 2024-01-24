@@ -73,7 +73,7 @@ public class CommandSwerveDrivetrain extends SwerveDrivetrain implements Subsyst
                         return alliance.get() == DriverStation.Alliance.Red;
                     }
                     return false;
-                }, 
+                },
             this);
     }
 
